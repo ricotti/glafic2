@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: glafic
+Version: 2.1.5
+Summary: Library for gravitational lensing analyses
+Home-page: https://github.com/oguri/glafic2
+Author: Masamune Oguri
+Requires-Python: >=3
+License-File: LICENSE

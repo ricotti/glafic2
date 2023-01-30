@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+python/glafic/__init__.py
+python/glafic/glafic.so
+python/glafic.egg-info/PKG-INFO
+python/glafic.egg-info/SOURCES.txt
+python/glafic.egg-info/dependency_links.txt
+python/glafic.egg-info/top_level.txt

@@ -4,8 +4,8 @@ UNAME_M := $(shell uname -m)
 ifeq ($(UNAME_S),Darwin)
         ifeq ($(UNAME_M),x86_64)
                 CFLAGS2 = -lcurl
-                LIBPATH = /usr/local/lib
-                INCPATH = /usr/local/include
+                LIBPATH = /opt/local/lib
+                INCPATH = /opt/local/include
         else
                 CFLAGS2 = -lcurl
                 LIBPATH = /opt/homebrew/lib
@@ -26,7 +26,7 @@ endif
 CC	= gcc
 CFLAGS	= -O2 -Wall -I$(INCPATH)
 #LIBS    = -L.. -lglafic -lcfitsio -lfftw3 -lgsl -lgslcblas -lm
-LIBS    = -L.. -lglafic $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a -lm
+LIBS    = -L.. -lglafic $(LIBPATH)/libz.a $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a -lm
 
 all: test mock_siex
 

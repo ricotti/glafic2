@@ -4,8 +4,8 @@ UNAME_M := $(shell uname -m)
 ifeq ($(UNAME_S),Darwin)
 	ifeq ($(UNAME_M),x86_64)
 		CFLAGS2 = -lcurl
-		LIBPATH = /usr/local/lib
-		INCPATH = /usr/local/include
+		LIBPATH = /opt/local/lib
+		INCPATH = /opt/local/include
 		PY_LIBS = -lm -lcfitsio -lfftw3 -lgsl -lgslcblas
 	else
 		CFLAGS2 = -lcurl -lz
@@ -30,7 +30,7 @@ endif
 CC	= gcc
 CFLAGS	= -O2 -Wall -fPIC -I$(INCPATH)
 #LIBS    = -lm -lcfitsio -lfftw3 -lgsl -lgslcblas
-LIBS	= -lm $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a 
+LIBS	= -lm $(LIBPATH)/libz.a $(LIBPATH)/libcfitsio.a $(LIBPATH)/libfftw3.a $(LIBPATH)/libgsl.a $(LIBPATH)/libgslcblas.a 
 
 # for binary program
 BIN	= glafic
